@@ -36,7 +36,7 @@ async def echo_handler(message: types.Message) -> None:
         await message.send_copy(chat_id=message.chat.id)
     except TypeError:
         # отработка ошибок
-        await message.answer("трах потерял?")
+        await message.answer("Cтрах потерял?")
 
 
 async def main() -> None:
