@@ -9,8 +9,10 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 from aiogram.utils.markdown import hbold
 
+from config import TOKEN
+# Подтягивание токена из скрытого конфига
+bot = Bot(token=TOKEN)
 
-TOKEN = "6366080094:AAE67KpYyJRG4GFa8cR9ZTiEkzl_YqIBsps"
 
 dp = Dispatcher()
 
@@ -20,7 +22,7 @@ async def command_start_handler(message: Message) -> None:
     """
     Ответ на стартовую команду
     """
-    await message.answer(f"Hello, {hbold(message.from_user.full_name)}!")
+    await message.answer(f"Салам, {hbold(message.from_user.full_name)}!")
 
 
 @dp.message()
@@ -34,7 +36,7 @@ async def echo_handler(message: types.Message) -> None:
         await message.send_copy(chat_id=message.chat.id)
     except TypeError:
         # отработка ошибок
-        await message.answer("Nice try!")
+        await message.answer("трах потерял?")
 
 
 async def main() -> None:
