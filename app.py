@@ -1,6 +1,9 @@
 import asyncio
 import logging
 import sys
+import requests
+import bs4
+from bs4 import BeautifulSoup
 from os import getenv
 
 from aiogram import Bot, Dispatcher, Router, types
@@ -10,6 +13,9 @@ from aiogram.types import Message
 from aiogram.utils.markdown import hbold
 
 from config import TOKEN
+
+from parsing import soup
+
 # Подтягивание токена из скрытого конфига
 bot = Bot(token=TOKEN)
 
