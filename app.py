@@ -28,7 +28,7 @@ async def command_start_handler(message: Message) -> None:
     """
     Ответ на стартовую команду
     """
-    await message.answer(f"Салам, {hbold(message.from_user.full_name)} {name}\n\n{price}\n\n{description}\n\n{image_url}\n\n")
+    await message.answer(f"Салам, {hbold(message.from_user.full_name)} Вот надень!\n\n{name}\n\n{price}\n\n{description}\n\n{image_url}\n\n")
 
 
 @dp.message()
