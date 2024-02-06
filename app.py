@@ -14,7 +14,7 @@ from aiogram.utils.markdown import hbold
 
 from config import TOKEN
 
-from parsing import soup
+from parsing import name, price, description, image_url
 
 # Подтягивание токена из скрытого конфига
 bot = Bot(token=TOKEN)
@@ -28,7 +28,7 @@ async def command_start_handler(message: Message) -> None:
     """
     Ответ на стартовую команду
     """
-    await message.answer(f"Салам, {hbold(message.from_user.full_name)}!")
+    await message.answer(f"Салам, {hbold(message.from_user.full_name)} {name}\n\n{price}\n\n{description}\n\n{image_url}\n\n")
 
 
 @dp.message()
