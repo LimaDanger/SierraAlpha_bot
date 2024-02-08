@@ -14,7 +14,7 @@ from aiogram.utils.markdown import hbold
 
 from config import TOKEN
 
-from parsing import name, price, description, image_url
+from Parsing_function import name, price, description, image_url
 
 # Подтягивание токена из скрытого конфига
 bot = Bot(token=TOKEN)
